@@ -1,0 +1,103 @@
+.footer {
+    background-color: $first-color;
+    padding-top: 56px;
+    padding-bottom: 16px;
+    &__logo {
+        grid-area: wide1;
+        margin-bottom: 15px;
+        & > a > img {
+            width: 208px;
+        }
+    }
+
+    &__contacts {
+        padding-top: 47px;
+        padding-right: 105px;
+        margin-bottom: 46px;
+    }
+
+    &__contacts-phone {
+        margin-bottom: 40px;
+    }
+
+    &__contacts-address {
+        grid-area: address;
+        margin-bottom: 32px;
+        font-weight: 500;
+        color: $footer-text-color;
+    }
+
+    &__contacts-email {
+        font-weight: 500;
+        color: $footer-text-color;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+
+    &__title {
+        color: $third-color;
+        font-weight: 800;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    &__nav {
+        color: $footer-text-color;
+        display: flex;
+        flex-direction: column;
+        font-size: $footer-nav-link-font-size;
+
+        &-link {
+            margin-bottom: 10px;
+            transition: color 0.2s ease;
+        }
+        &-link:hover {
+            color: $link-hover-color;
+        }
+    }
+
+    &__about-nav {
+        grid-area: nav1;
+    }
+
+    &__services-nav {
+        grid-area: nav2;
+    }
+
+    &__help-nav {
+        grid-area: nav3;
+    }
+
+    &__book-online-button {
+        grid-area: btn;
+        margin-bottom: 75px;
+
+        & > .book-online-button {
+            width: 180px;
+        }
+    }
+
+    &__socials {
+        grid-area: socials;
+    }
+
+    &__copyright {
+        grid-area: copyright;
+        color: $footer-text-color;
+        font-size: 14px;
+    }
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'wide1 wide1 wide1 wide1'
+        'address nav1 nav2 nav3'
+        'btn XXXX XXXX socials'
+        'copyright copyright copyright copyright';
+}

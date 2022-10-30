@@ -1,0 +1,33 @@
+.footer {
+    &__socials {
+        padding-left: 30px;
+    }
+}
+.socials {
+    display: flex;
+
+    &-icon {
+        fill: #fff;
+        transition: fill 0.2s ease;
+    }
+
+    &__youtube:hover {
+        fill: $link-hover-color;
+    }
+
+    &__facebook:hover {
+        fill: $link-hover-color;
+    }
+
+    &__pinterest:hover {
+        fill: $link-hover-color;
+    }
+
+    &__instagram:hover {
+        fill: $link-hover-color;
+    }
+}
+.socials-item {
+    margin-right: 20px;
+    flex-shrink: 0;
+}

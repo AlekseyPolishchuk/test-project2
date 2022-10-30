@@ -1,0 +1,29 @@
+.book-online-button {
+    display: flex;
+    align-items: center;
+    padding: 9px 22px;
+    gap: 9px;
+    border-radius: 12px;
+    background-color: $second-color;
+    transition: all 0.2s ease;
+
+    &__icon {
+        background-image: url(../img/icons/svg/settings.svg);
+        width: 18px;
+        height: 18px;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        color: $first-color;
+        font-size: $button-font-size;
+        font-weight: 800;
+        line-height: 1.625em;
+        letter-spacing: -0.03125em;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        background-color: #fdffa3;
+    }
+}

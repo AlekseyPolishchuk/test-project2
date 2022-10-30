@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/home-page.min.css">
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -93,15 +94,13 @@
                 <div class="header__navigation">
                     <div class="header__row">
                         <div class="header__logo">
-                            <a href="#">
-                                <img src="./img/logo.svg" alt="logo">
-                            </a>
+                            <?php the_custom_logo(); ?>
                         </div>
                         <div class="header-search">
                             <form class="search">
                                 <label class="search-label">
                                     <input placeholder="Enter City / Postal Code" class="search-input" type="text">
-                                    <img class="search-icon" src="./img/icons/svg/search.svg" alt="Search">
+                                    <img class="search-icon" src="<?php bloginfo('template_url'); ?>/assets/img/icons/svg/search.svg" alt="Search">
                                 </label>
                             </form>
                         </div>
@@ -117,7 +116,7 @@
                     </nav>
                 </div>
                 <div class="header__contacts">
-                    <a href="tel:+12263700170" class="phone-number">+1 226-370-0170</a>
+                    <a href="tel:<?php the_field('phone'); ?>" class="phone-number"><?php the_field('phone'); ?></a>
                     <a href="#" class="book-online-button">
                         <div class="book-online-button__icon"></div>
                         <div class="book-online-button__text">Book online</div>
@@ -126,138 +125,3 @@
             </div>
         </div>
     </div>
-
-    <div class="intro">
-        <div class="container">
-            <h1 class="intro__title">Appliance Repair Service</h1>
-            <h3 class="intro__subtitle">Your Local Appliance Repair Company</h3>
-            <ul class="intro__list">
-                <li class="intro__list-item">
-                    Repair of any complexity of all brands of equipment
-                </li>
-                <li class="intro__list-item">
-                    Affordable rates for various appliance repairs
-                </li>
-                <li class="intro__list-item">
-                    Licensed, trained techs with years of experience
-                </li>
-                <li class="intro__list-item">
-                    Same/next-day appointment
-                </li>
-            </ul>
-            <a href="#">
-                <div class="request-call-button">
-                    <svg class="request-call-button__icon" width="15" height="15">
-                        <use href="#phone"></use>
-                    </svg>
-                    <div class="request-call-button__text">Request a call</div>
-                </div>
-            </a>
-        </div>
-        <img src="./img/repairman.png" class="intro__img"></img>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-
-                <div class="footer-grid__item footer__logo">
-                    <a href="#">
-                        <img src="./img/big-logo.svg" alt="Big logo">
-                    </a>
-                </div>
-
-                <address class="footer-grid__item footer__contacts">
-                    <a href="tel:+12263700170" class="footer__contacts-phone phone-number">
-                        +1 226-370-0170
-                    </a>
-                    <div class="footer__contacts-address">
-                        Unit 4, 5267 Explorer drive,
-                        <br>Toronto, On L4W 4T7
-                    </div>
-                    <a href="mailto:info@appliancerepairexpert.ca" class="footer__contacts-email">
-                        info@appliancerepairexpert.ca
-                    </a>
-                </address>
-
-                <div class="footer-grid__item footer__about-nav">
-                    <h3 class="footer__title">
-                        About company
-                    </h3>
-                    <nav class="footer__nav">
-                        <a href="#" class="footer__nav-link">Maintance Plans</a>
-                        <a href="#" class="footer__nav-link">Coupons</a>
-                        <a href="#" class="footer__nav-link">Review</a>
-                        <a href="#" class="footer__nav-link">FAQ</a>
-                        <a href="#" class="footer__nav-link">Blog</a>
-                        <a href="#" class="footer__nav-link">Contact</a>
-                    </nav>
-                </div>
-
-                <div class="footer-grid__item footer__services-nav">
-                    <h3 class="footer__title">
-                        Custumer services
-                    </h3>
-                    <nav class="footer__nav">
-                        <a href="#" class="footer__nav-link">Residential</a>
-                        <a href="#" class="footer__nav-link">Commercial</a>
-                        <a href="#" class="footer__nav-link">Repair</a>
-                        <a href="#" class="footer__nav-link">Installation</a>
-                    </nav>
-                </div>
-
-                <div class="footer-grid__item footer__help-nav">
-                    <h3 class="footer__title">
-                        Help and support
-                    </h3>
-                    <nav class="footer__nav">
-                        <a href="#" class="footer__nav-link">Appliance Repair Warranty</a>
-                        <a href="#" class="footer__nav-link">Cancellation Policy</a>
-                        <a href="#" class="footer__nav-link">Privacy Policy</a>
-                        <a href="#" class="footer__nav-link">Careers</a>
-                </div>
-
-                <div class="footer-grid__item footer__book-online-button">
-                    <a href="#" class="book-online-button">
-                        <div class="book-online-button__icon"></div>
-                        <div class="book-online-button__text">Book online</div>
-                    </a>
-                </div>
-
-                <div class="footer-grid__item footer__socials">
-                    <div class="socials">
-
-                        <a href="#" class="socials-item">
-                            <svg class='socials-icon socials__youtube' width='30' height='30'>
-                                <use href='#youtube'></use>
-                            </svg>
-                        </a>
-
-                        <a href="#" class="socials-item">
-                            <svg class='socials-icon socials__facebook' width='30' height='30'>
-                                <use href='#facebook'></use>
-                            </svg>
-                        </a>
-
-                        <a href="#" class="socials-item">
-                            <svg class='socials-icon socials__pinterest' width='30' height='30'>
-                                <use href='#pinterest'></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="socials-item">
-                            <svg class='socials-icon socials__instagram' width='30' height='30'>
-                                <use href='#instagram'></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-grid__item footer__copyright">All rights reserved © 2005-2021</div>
-
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>

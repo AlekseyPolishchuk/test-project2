@@ -174,9 +174,6 @@ body {
   letter-spacing: 0.01em;
   margin-right: 10px;
 }
-.header__logo {
-  margin-right: 265px;
-}
 .header__nav-link {
   -webkit-transition: color 0.2s ease;
   -o-transition: color 0.2s ease;
